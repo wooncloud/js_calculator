@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/js_cal.css">
+    <title>성호의 계산기</title>
+</head>
+<script type="text/javascript" src="./js/js_p01.js"></script>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h3>🧮 성호의 계산기</h3>
+        </div>
+        <div id="calculator">
+            <div class="cal-body">
+                <div>
+                    <!-- display -->
+                    <div id="calDisplay" class="display"></div>
+                    <div id="numDisplay" class="display">0</div>
+                </div>
+                <div>
+                    <!-- btn -->
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" onclick="calculator.clear.clearNum()">C</td>
+                                <td onclick="calculator.clear.clearEntry()">CE</td>
+                                <td class="btn-func" onclick="calculator.deleteNum()">◀</td>
+                            </tr>
+                            <tr>
+                                <td class="btn-num">9</td>
+                                <td class="btn-num">8</td>
+                                <td class="btn-num">7</td>
+                                <td class="btn-oper" data-oper="/">➗</td>
+                            </tr>
+                            <tr>
+                                <td class="btn-num">6</td>
+                                <td class="btn-num">5</td>
+                                <td class="btn-num">4</td>
+                                <td class="btn-oper" data-oper="*">✖️</td>
+                            </tr>
+                            <tr>
+                                <td class="btn-num">3</td>
+                                <td class="btn-num">2</td>
+                                <td class="btn-num">1</td>
+                                <td class="btn-oper" data-oper="-">➖</td>
+                            </tr>
+                            <tr>
+                                <td class="btn-func" onclick="calculator.percent()">%</td>
+                                <td class="btn-num">0</td>
+                                <td class="btn-func" onclick="calculator.cal.calResult()">=</td>
+                                <td class="btn-oper" data-oper="+">➕</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="history"></div>
+        </div>
+    </div>
+</body>
+
+</html>
